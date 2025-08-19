@@ -105,7 +105,24 @@ For more control and potentially lower costs at scale:
 7. Configure security groups to allow HTTP/HTTPS traffic
 8. Set up a reverse proxy with Nginx (optional but recommended)
 
-### 6. Docker Deployment
+### 6. Vercel (Serverless Functions)
+
+Perfect for serverless deployment with automatic scaling:
+
+1. Push your code to GitHub
+2. Connect repository to Vercel
+3. Set environment variables in Vercel dashboard:
+   - `CONNECTION_STRING`: MongoDB Atlas connection string
+   - `ACCESS_TOKEN_SECRET`: JWT secret key
+   - `NODE_ENV`: production
+4. Deploy automatically
+
+**Pros:** Automatic scaling, free tier, great performance, easy setup
+**Cons:** Requires MongoDB Atlas, 10-second function timeout
+
+See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed instructions.
+
+### 7. Docker Deployment
 
 See the Docker configuration files created in this project for containerized deployment to any cloud provider that supports Docker.
 

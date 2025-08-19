@@ -309,13 +309,24 @@ This application is ready for deployment on various platforms. Check out the [DE
 - **AWS EC2**
 - **Docker-based deployments**
 
-### Quick Deploy to Railway
+### Quick Deploy Options
+
+**Deploy to Railway:**
 ```bash
 npm install -g @railway/cli
 railway login
 railway init
 railway up
 ```
+
+**Deploy to Vercel:**
+```bash
+npm install -g vercel
+vercel login
+vercel --prod
+```
+
+> **Note for Vercel**: You must use MongoDB Atlas (cloud database) as Vercel doesn't support local databases. See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed instructions.
 
 ## 🔧 Environment Variables
 
